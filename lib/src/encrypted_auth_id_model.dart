@@ -1,5 +1,5 @@
 
-import 'package:auth_id/auth_id_model.dart';
+import 'package:auth_id/auth_id.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'dart:convert';
 import 'package:solana/base58.dart';

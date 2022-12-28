@@ -8,6 +8,7 @@ environment:
   flutter: ">=1.17.0"
 
 dependencies:
+  json_annotation: 4.7.0
   solana: ^0.26.1
   pinenacl: ^0.5.1
   flutter:
