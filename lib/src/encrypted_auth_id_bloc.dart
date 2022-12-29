@@ -42,7 +42,12 @@ class EncryptedAuthIdBloc extends Cubit<EncryptedAuthIdState> {
             items.map(
                 none: (none) => emit(const EncryptedAuthIdState.none()),
                 loading: (loading) => emit(const EncryptedAuthIdState.none()),
-                some: (some) => emit(EncryptedAuthIdState.some(some.encryptedAuthId)));
+                some: (some) {
+                  if (some.encryptedAuthId != null){
+                    _encryptedAuthIdSome = true;
+                  }
+                  emit(EncryptedAuthIdState.some(some.encryptedAuthId));
+                });
       },
       onError: (error) => print("STREAM ERROR: $error"),
     );
