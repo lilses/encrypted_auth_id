@@ -22,6 +22,7 @@ class EncryptedAuthIdBloc extends Cubit<EncryptedAuthIdState> {
   EncryptedAuthIdBloc({required this.encryptedAuthIdRepo, required this.key, required this.password, required this.authIdRepo}) :
         super(const EncryptedAuthIdState.none()){
     subscribe();
+    restore();
   }
 
   EncryptedAuthId? get(){
